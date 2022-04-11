@@ -1,0 +1,11 @@
+.span_text {
+  color: black;
+  text-decoration: none;
+  flex: 1;
+  cursor: pointer;
+  align-self: center;
+  font-size: 18px;
+}
+.badge_success_color {
+  background-color: green;
+}
