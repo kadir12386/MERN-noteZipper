@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./LandingPage.css";
 import { Button, Container, Row } from "react-bootstrap";
 
-export const LandingPage = () => {
-  // useEffect(() => {
-  //   const userInfo = localStorage.getItem("userInfo");
-  //   if (userInfo) {
-  //     history.push("/mynotes");
-  //   }
-  // }, [history]);
+export const LandingPage = ({ history }) => {
+  useEffect(() => {
+    const userInfo = localStorage.getItem("userInfo");
+    if (userInfo) {
+      history.push("/mynotes");
+    }
+  }, [history]);
+
   // //whenever it changes it going to call or trigger the useEffect function
   return (
     <div className="main">
