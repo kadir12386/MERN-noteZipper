@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./LandingPage.css";
 import { Button, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const LandingPage = ({ history }) => {
   useEffect(() => {
@@ -21,13 +22,13 @@ export const LandingPage = ({ history }) => {
               <p className="subtitle">One safe place for all your notes.</p>
             </div>
             {/* button */}
-            {/* <div className="buttonContainer">
-              <a href="/login">
+            <div className="buttonContainer">
+              <Link to="/login">
                 <Button size="lg" className="landingbutton">
                   Login
                 </Button>
-              </a>
-              <a href="/register">
+              </Link>
+              <Link to="/register">
                 <Button
                   size="lg"
                   className="landingbutton "
@@ -35,8 +36,8 @@ export const LandingPage = ({ history }) => {
                 >
                   Signup
                 </Button>
-              </a>
-            </div> */}
+              </Link>
+            </div>
           </div>
         </Row>
       </Container>
