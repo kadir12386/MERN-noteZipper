@@ -18,17 +18,21 @@ function App() {
       <div className="App">
         {/* header */}
         <Header setSearch={setSearch} />
-        <main>
+        <main className="App">
           <Route path="/" component={LandingPage} exact />
           <Route path="/login" component={LoginScreen} />
-          <Route path="/profile" component={ProfileScreen} />
           <Route path="/register" component={RegisterScreen} />
-          <Route path="/createnote" component={CreateNote} />
-          <Route path="/note/:id" component={SingleNote} exact />
+
           <Route
             path="/mynotes"
-            component={() => <MyNotes search={search} />}
+            component={({ history }) => (
+              <MyNotes search={search} history={history} />
+            )}
           />
+
+          <Route path="/note/:id" component={SingleNote} />
+          <Route path="/createnote" component={CreateNote} />
+          <Route path="/profile" component={ProfileScreen} />
         </main>
         <Footer />
       </div>

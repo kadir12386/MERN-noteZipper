@@ -44,9 +44,7 @@ export const Header = ({ setSearch }) => {
 
           {userInfo ? (
             <Nav>
-              <Nav.Link href="/mynotes">
-                <Link to="/mynotes">MyNotes</Link>
-              </Nav.Link>
+              <Nav.Link href="/mynotes">My Notes</Nav.Link>
               <NavDropdown title={userInfo?.name} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>
 
@@ -59,11 +57,7 @@ export const Header = ({ setSearch }) => {
               </div>
             </Nav>
           ) : (
-            <Nav>
-              <Nav.Link href="/mynotes">
-                <Link to="/login">Login</Link>
-              </Nav.Link>
-            </Nav>
+            <Nav.Link href="/login">Login</Nav.Link>
           )}
         </Navbar.Collapse>
       </Container>
