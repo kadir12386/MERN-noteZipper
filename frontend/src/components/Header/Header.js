@@ -23,7 +23,7 @@ export const Header = ({ setSearch }) => {
 
   useEffect(() => {}, [userInfo]);
   return (
-    <Navbar bg="danger" expand="lg" variant="dark">
+    <Navbar bg="success" expand="lg" variant="dark">
       <Container>
         <Navbar.Brand href="/">
           <Link to="/">Note Zipper</Link>
